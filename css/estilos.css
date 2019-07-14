@@ -1,0 +1,89 @@
+/*Demo styles */
+
+ html, body {
+     position: relative;
+     height: 80%;
+ }
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/*Fin del css del swiper */
+
+/*Footer */
+.footer1{
+    background-color: darkslategray;
+    height: 30vh;
+    width: 100%;
+    color: white;
+}
+.footerTexto{
+    line-height: 1px;
+    text-align: center;
+}
+.redesSociales {
+    height: 40px;
+    padding: 5px;
+}
+#redSocial{
+    margin-left: 45%;
+}
+/*Esto será para centrar texto. */
+.textoCentrado{
+    text-align: center;
+}
+/*Esto es para que aparezca el cursor en "volver al inicio." */
+#volverAlInicio{
+    cursor: pointer;
+}
+
+.redesSociales{ /*Para que el cursor aparezca en los iconos de las redes sociales. */
+    cursor: pointer;
+}
+
+/*Estilos del swiper coverflow. */
+.swiper-container2 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.ss2 { /*Esto es del swiper slider 2. Esto me da el tamaño de los videos */
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+}
+
+/*Fin del swiper coverflow.*/
+

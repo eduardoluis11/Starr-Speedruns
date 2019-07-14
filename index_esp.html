@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Starr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="author" content="Eduardo Luis Salinas Rivas">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://idangero.us/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css"> <!-- CSS 1 de Sidr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/stylesheets/jquery.sidr.light.min.css"> <!-- CSS 2 de Sidr -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--Contenedor principal (container fluid) -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>STARR</h1>
+            </div>
+            <div class="col">
+                <a class="linkBoton" href="#botonJuegos" rel="modal:open">Juegos</a>
+            </div>
+            <div class="col">
+                <a class="linkBoton" href="#botonCategorias" rel="modal:open">Categorías</a>
+            </div>
+            <div class="col">
+                <a class="linkBoton" href="#botonAcerca" rel="modal:open">Acerca de</a>
+            </div>
+            <div class="col">
+                <a class="linkBoton" href="#botonContacto" rel="modal:open">Contacto</a>
+            </div>
+            <div class="col"> <!-- Cambiar a inglés -->
+                <a class="linkBoton" href="./index_eng.html">English</a>
+            </div>
+            <div class="col">
+                <a class="linkBoton" href="#botonAcceder" rel="modal:open">Acceder</a><!-- Enlace para abrir modal
+                jquery de "acceder". -->
+            </div>
+            <div class="col">
+                <a class="linkBoton" href="#botonAlta" rel="modal:open">Date de alta</a> <!--Enlace "alta",-->
+            </div>
+
+        </div> <!-- Fin del 1er row -->
+        <br>
+        <div id="botonAcceder" class="modal"> <!-- Modal Jquery. La clase "modal" es para llamar al modal de jquery -->
+            <!--Modal de "accede"-->
+            <div>
+                <form id="formulario">   <!-- Formulario de "Accede". -->
+                    <div class="form-group">
+                        <h3 class="textoCentrado">Accede a tu cuenta</h3>
+                        <br>
+                        <label><b>Usuario</b></label>
+                        <input id="usuario" type="text" class="form-control" name="uname" required>
+                    </div>
+                        <br>
+                    <div class="form-group">
+                        <label><b>Contraseña</b></label>
+                        <input id="contrasena" type="password" class="form-control"  name="psw" required>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <button id="acceder2" class="btn btn-primary" type="button">Acceder</button>
+                    </div>
+                </form><!-- Fin del formulario de "accede". -->
+            </div> <!-- Fin del contenido del modal de acceder -->
+            <div style="padding-top: 5vh">
+                <a class="cerrar" href="#" rel="modal:close">Cerrar</a> <!--Esto es el boton para cerrar el modal. -->
+            </div>
+        </div> <!--Fin del modal "acceder". -->
+        <!--Modal "Darte de alta." -->
+        <div id="botonAlta" class="modal"> <!-- Modal Jquery. La clase "modal" es para llamar al modal de jquery -->
+            <!--Modal de "accede"-->
+            <div>
+                <form>   <!-- Formulario de "Date de alta". -->
+                    <h3 class="textoCentrado">Date de alta</h3>
+                    <br>
+                    <div class="form-group">
+                        <div class="aviso2">
+                            <!-- Esto solo aparecerá si rellenas correctamente el formulario. -->
+                            <span>¡Casi has terminado! Revisa tu email y clica en el enlace de confirmación en el correo
+                            que te hemos enviado para terminar de crear tu cuenta.</span>
+                        </div>
+                        <br>
+                        <label>Nombre de usuario</label>
+                        <input type="text" class="form-control usuario2" name="uname" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control correo"  name="psw" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input id="contrasena2" type="password" class="form-control"  name="psw" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirmar contraseña</label>
+                        <input id="contrasena3" type="password" class="form-control"  name="psw" required>
+                    </div>
+                    <div class="text-center">
+                        <button id="altaConfirmar" class="btn btn-primary" type="button">Crear cuenta</button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check0">
+                        <label class="form-check-label" style="font-size:12px">Acepto la <u>política de privacidad</u>.</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1">
+                        <label class="form-check-label" style="font-size:12px">Acepto que se <u>almacene mi información</u>.</label>
+                    </div>
+                </form><!-- Fin del formulario de "alta". -->
+            </div> <!-- Fin del contenido del modal "darte de alta." -->
+            <div>
+                <a class="cerrar" href="#" rel="modal:close">Cerrar</a>
+            </div>
+        </div> <!--Fin del modal "darte de alta". -->
+        <!--Inicio del modal "contacto". -->
+        <div id="botonContacto" class="modal">
+            <div>
+                <p>Autor de la página: Eduardo Luis Salinas Rivas.</p>
+                <p>Teléfono: 777 777 777</p>
+            </div> <!-- Fin del contenido del modal "contacto." -->
+            <div>
+                <a class="cerrar" href="#" rel="modal:close">Cerrar</a>
+            </div>
+        </div> <!--Fin del modal "contacto". -->
+
+
+        <!--Inicio del modal "acerca de". -->
+        <div id="botonAcerca" class="modal">
+            <div>
+                <p>Página web creada por: Eduardo Luis Salinas Rivas.</p>
+                <p>Starr es una página web de vídeos de Speedrunning.</p>
+                <p>¿Qué es speedrunning? Speedrunning es el acto de pasar un videojuego lo más rápido posible.</p>
+            </div> <!-- Fin del contenido del modal "contacto." -->
+            <div>
+                <a class="cerrar" href="#" rel="modal:close">Cerrar</a>
+            </div>
+        </div> <!--Fin del modal "acerca de". -->
+
+        <!--Inicio del modal "categorías.". -->
+        <div id="botonCategorias" class="modal">
+            <div>
+                <p>Speedruns hechos por personas.</p>
+                <p>Speedruns hechos por bots (TAS).</p>
+            </div> <!-- Fin del contenido del modal "categorias." -->
+            <div>
+                <a class="cerrar" href="#" rel="modal:close">Cerrar</a>
+            </div>
+        </div> <!--Fin del modal "categorias.". -->
+
+        <!--Inicio del modal "juegos.". -->
+        <div id="botonJuegos" class="modal">
+            <div>
+                <p>Lista de juegos (sección en construcción).</p>
+            </div> <!-- Fin del contenido del modal "categorias." -->
+            <div>
+                <a class="cerrar" href="#" rel="modal:close">Cerrar</a>
+            </div>
+        </div> <!--Fin del modal "juegos.". -->
+
+
+
+        <div>
+            <span class="aviso">¡Bienvenido, usuario!</span> <!-- Esto solo aparecerá si incias sesión. -->
+            <h4>Speedruns más populares</h4>
+        </div>
+    </div><!-- Fin del primer container fluid. -->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!--Meteré los iframes de Youtube en el slider. -->
+            <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/Z-q8d3xyIS0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/VmqA6dERP_Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/osPKBBiYeio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/zLphAlLQNiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/bac8YDHFvFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div> <!--Fin del swiper. -->
+    <br>
+        <br>
+        <div>
+            <h5>Speedruns más recientes</h5>
+        </div>
+        <br>
+        <!-- Swiper de speedruns recientes. -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/6eS_3SVrmZ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/jNrTBd6ae58" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/U1fhVsWFrCU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/v7hsDLLLEK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/Pvml_9U3Jws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <br> <!--Esto es para que los puntos azules estén debajo del video. -->
+            <br>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> <!--Fin de speedruns recientes. -->
+        <br>
+        <div>
+            <h5>Speedruns asistidos con herramientas (TAS)</h5>
+        </div>
+        <!-- Swiper de TAS -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/Fl8xeF5AGYk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/RHIAIHZsp9o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/W9gxFkOz2_4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/mAQidEjCNTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/frsBwbKQ79I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <br>
+            <br>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> <!--Fin de TAS. -->
+        <br>
+        <div>
+            <h5>Speedruns por consola</h5>
+        </div>
+        <br>
+        <div>
+            <h6>PS4</h6> <!--PS4. -->
+        </div>
+        <br>
+        <!-- Swiper de PS4-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/U4omDcgwCqY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/2Xyp3PsZM30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/V6WpzAoBTzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/MXU_FlI5qFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/cUDRuMg_MkI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <br>
+            <br>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> <!--Fin de PS4. -->
+        <br>
+        <div> <!--Xbox One.-->
+            <h6>Xbox One</h6>
+        </div>
+        <br>
+        <!-- Swiper de Xbox One-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/FiIxRPYrmx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/zWgPtJYM8MA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/fSxPPh2UXSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/MJvs1BGlydc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/iPGYQb9bQQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <br>
+            <br>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> <!--Fin de Xbox One. -->
+        <br>
+        <div> <!--Nintendo Switch. -->
+            <h6>Nintendo Switch</h6>
+        </div>
+        <br>
+        <!-- Swiper de Nintendo Switch-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/rh34gpE84EY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/3hA9QU4arFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/BY_ENn2vxEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/KpgZlJs3iPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/qTH4RQxjTFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <br>
+            <br>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> <!--Fin de Nintendo Switch. -->
+        <br>
+        <div> <!--PC.-->
+            <h6>PC</h6>
+        </div>
+        <br>
+        <!-- Swiper de PC.-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/rXf9StL1IwE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/lqJfjItbK4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/rv7S4zAD-tI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/Bnecs19idEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="swiper-slide"><iframe width="560" height="315" src="https://www.youtube.com/embed/LnFjTG9J-T8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <br>
+            <br>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> <!--Fin de PC. -->
+
+    <br>
+    <div class="container-fluid footer1">
+        <footer> <!--Creé otro container fluid para el footer para que el color ocupe toda la pantalla -->
+            <div>
+                <div>
+                    <p id="volverAlInicio"><u>Volver al inicio de la página.</u></p>
+                </div>
+                <div id="redSocial">
+                    <a href="https://www.facebook.com/" target="_blank"><img class="redesSociales" src="img/facebook.PNG" alt="fb"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img class="redesSociales" src="img/instagram.PNG" alt="instagram"></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="img/twitter.PNG" alt="twitter" class="redesSociales"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="img/youtube.PNG" alt="youtube" class="redesSociales"></a>
+                </div>
+                <br>
+                <div class="footerTexto">
+                    <p>© STARR 2019.</p>
+                    <p>Página web creada por Eduardo Luis Salinas Rivas.</p>
+                    <p>Todos los juegos son copyright de sus respectivos dueños.</p>
+                    <p>YouTube es copyright de Alphabet Inc.</p>
+                </div>
+            </div>
+        </footer>
+    </div> <!--Fin del container fluid del footer. -->
+
+    <!--Probando el menu del plugin Sidr.
+    <a id="simple-menu" href="#sidr">Toggle menu</a>
+
+    <!--JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>
+    <!--Mi script. -->
+    <script src="js/script.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!--Sidr plugin (menu responsive). -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/jquery.sidr.min.js"></script>
+
+</body>
+</html>
